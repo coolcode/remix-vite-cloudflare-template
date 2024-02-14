@@ -2,7 +2,7 @@
 // const plugin = require("tailwindcss/plugin")
 const defaultTheme = require("tailwindcss/defaultTheme")
 export default {
-  content: ["./index.html", "./app/root.tsx", "./app/**/*.{js,jsx,ts,tsx}"],
+  content: ["./index.html", "./app/root.jsx", "./app/**/*.{js,jsx,ts,tsx}"],
   extend: {},
   theme: {
     extend: {
