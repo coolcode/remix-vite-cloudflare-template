@@ -15,6 +15,7 @@
 			".wrangler",
 			"node_modules",
 			"public",
+			"build",
 			"functions",
 			"styles",
 			"*.json"
