@@ -2,40 +2,42 @@ import {
   type ActionFunctionArgs,
   type LoaderFunctionArgs,
   json,
-} from "@remix-run/cloudflare";
-import { Form, useLoaderData } from "@remix-run/react";
+} from "@remix-run/cloudflare"
+import { Form, useLoaderData } from "@remix-run/react"
 
-const key = "__my-key__";
+const key = "__my-key__"
 
 export async function loader({ context }: LoaderFunctionArgs) {
-  const { MY_KV } = context.env;
-  const value = await MY_KV.get(key);
-  return json({ value });
+  const { MY_KV } = context.env
+  const value = await MY_KV.get(key)
+  return json({ value })
 }
 
 export async function action({ request, context }: ActionFunctionArgs) {
-  const { MY_KV: myKv } = context.env;
+  const { MY_KV: myKv } = context.env
 
   if (request.method === "POST") {
-    const formData = await request.formData();
-    const value = formData.get("value") as string;
-    await myKv.put(key, value);
-    return null;
+    const formData = await request.formData()
+    const value = formData.get("value") as string
+    await myKv.put(key, value)
+    return null
   }
 
   if (request.method === "DELETE") {
-    await myKv.delete(key);
-    return null;
+    await myKv.delete(key)
+    return null
   }
 
-  throw new Error(`Method not supported: "${request.method}"`);
+  throw new Error(`Method not supported: "${request.method}"`)
 }
 
 export default function Index() {
-  const { value } = useLoaderData<typeof loader>();
+  const { value } = useLoaderData<typeof loader>()
   return (
     <div>
-      <h1>Welcome to Remix</h1>
+      <h1 className="text-3xl font-bold text-green-500">
+        Hello world!
+      </h1>
       {value ? (
         <>
           <p>Value: {value}</p>
@@ -55,5 +57,5 @@ export default function Index() {
         </>
       )}
     </div>
-  );
+  )
 }

@@ -1,3 +1,4 @@
+// import { cssBundleHref } from "@remix-run/css-bundle"
 import {
   Links,
   Meta,
@@ -5,6 +6,22 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import  "~/styles/tailwind.css"
+
+// export const links = () => [{ rel: "stylesheet", href: cssTailwind }, ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : [])]
+
+// https://aitdk.com/
+export const meta = () => [
+  { title: "Remix Cloudflare Template" },
+  {
+    name: "description",
+    content: "A Remix Cloudflare Template.",
+  },
+  {
+    name: "keywords",
+    content: "Remix, Cloudflare, Template",
+  },
+]
 
 export default function App() {
   return (
