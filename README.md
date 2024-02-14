@@ -1,6 +1,6 @@
 # Remix + Vite Cloudflare Template
 
-- [Online Demo](https://remix-cloudflare-demo-1ag.pages.dev)
+- [Online Demo](https://remix-vite-cloudflare-eyb.pages.dev)
 - [Remix Docs](https://remix.run/docs)
 - [Remix Vite docs](https://remix.run/docs/en/main/future/vite)
 
