@@ -1,7 +1,7 @@
 import {
-  json,
-  type LoaderFunctionArgs,
   type ActionFunctionArgs,
+  type LoaderFunctionArgs,
+  json,
 } from "@remix-run/cloudflare";
 import { Form, useLoaderData } from "@remix-run/react";
 
@@ -40,7 +40,7 @@ export default function Index() {
         <>
           <p>Value: {value}</p>
           <Form method="DELETE">
-            <button>Delete</button>
+            <button type="button">Delete</button>
           </Form>
         </>
       ) : (
@@ -50,7 +50,7 @@ export default function Index() {
             <label htmlFor="value">Set value: </label>
             <input type="text" name="value" id="value" required />
             <br />
-            <button>Save</button>
+            <button type="submit">Save</button>
           </Form>
         </>
       )}
