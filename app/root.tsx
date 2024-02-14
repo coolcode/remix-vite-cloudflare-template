@@ -1,14 +1,11 @@
-// import { cssBundleHref } from "@remix-run/css-bundle"
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import  "~/styles/tailwind.css"
-
-// export const links = () => [{ rel: "stylesheet", href: cssTailwind }, ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : [])]
+} from "@remix-run/react"
+import "~/styles/tailwind.css"
 
 // https://aitdk.com/
 export const meta = () => [
@@ -38,5 +35,5 @@ export default function App() {
         <Scripts />
       </body>
     </html>
-  );
+  )
 }
