@@ -19,6 +19,7 @@ export const meta = () => [
     content: "Remix, Cloudflare, Template",
   },
 ]
+export const links = () => []
 
 export default function App() {
   return (
